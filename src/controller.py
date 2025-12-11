@@ -53,7 +53,7 @@ def recommend(user: UserInfo):
 async def diet_analysis(file: UploadFile = File(...)):
     raw_bytes = await file.read()
 
-    # Step 1: 이미지 압축 적용 (413 방지)
+    # Step 1: 이미지 압축 적용
     img_bytes = compress_image(raw_bytes, max_size=512, quality=70)
 
     # Step 2: Vision 모델로 음식 분석
