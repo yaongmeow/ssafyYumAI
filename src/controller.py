@@ -18,10 +18,10 @@ def recommend(user: UserInfo):
     아래 JSON 형식만 반환하십시오.
     
     {
-      "calorie": <정수 또는 소수>,
-      "protein_g": <정수 또는 소수>,
-      "carb_g": <정수 또는 소수>,
-      "fat_g": <정수 또는 소수>
+      "calories": <정수 또는 소수>,
+      "protein": <정수 또는 소수>,
+      "carbohydrate": <정수 또는 소수>,
+      "fat": <정수 또는 소수>
     }
     
     설명이나 여분의 텍스트는 절대 포함하지 마십시오.
