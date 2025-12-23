@@ -6,5 +6,5 @@ from fastapi import FastAPI
 from openai import OpenAI
 from src.controller import router
 
-app = FastAPI()
+app = FastAPI(root_path="/ai")
 app.include_router(router)

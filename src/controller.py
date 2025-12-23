@@ -81,11 +81,21 @@ async def diet_analysis(file: UploadFile = File(...)):
 
         meta = food_meta[idx]
 
-        results.append({
-            "detected_food": name,
-            "estimated_gram": estimated_gram,
-            "matched_food": meta,
-            "similarity_distance": float(dist)
-        })
+        # results.append({
+        #     "detected_food": name,
+        #     "estimated_gram": estimated_gram,
+        #     "matched_food": meta,
+        #     # "similarity_distance": float(dist)
+        # })
+        meta["quantity"] = estimated_gram
+        results.append(meta)
+        print(meta)
 
-    return {"result": results}
+    # return {"result": results}
+    return results
+
+
+@router.post("/diet/recommend")
+async def recommend_diet():
+    # 식단 추천 기능
+    ...
